@@ -1,0 +1,73 @@
+<app-navbar></app-navbar>
+<div style="margin-top: 5%;">
+  <p-toolbar>
+    <div class="p-toolbar-group-start">
+      <div class="flex flex-column">
+        <div class="flex flex-row">
+          <p><strong>Transcribed By:</strong></p> 
+          <p> &nbsp; Garrick Allen, Kimberley Fowler</p>
+        </div>
+        <div class="flex flex-row">
+          <p><strong>Encoded By:</strong></p> 
+          <p> &nbsp; Rahul Agrahari</p>
+        </div>
+      </div>
+        <!-- <p-button icon="pi pi-plus" class="mr-2"/>
+        <p-button icon="pi pi-print" class="mr-2"/>
+        <p-button icon="pi pi-upload" /> -->
+    </div>
+    <div class="p-toolbar-group-center">
+        <span class="p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input pInputText placeholder="Search" />
+        </span>
+    </div>
+    <div class="p-toolbar-group-end">
+      <div class="card flex justify-content-center flex-column">
+        <span>Folio</span>
+        <p-dropdown 
+            [options]="allPages" 
+            optionLabel="page"
+            [(ngModel)]="selectedPage" 
+            placeholder="Select a Page"
+            (onChange)="onPageChange($event)" 
+            />
+    </div>
+    </div>
+  </p-toolbar>
+</div>
+
+<div class="flex flex-row">
+  <div class = "teiContainer">
+  <!-- <iframe style="width: 100%; height: 100vh;  margin-top: 5%;" src="" frameborder="0" srcdoc='
+    <div style="font-size: 150% !important; text-size-adjust: 150%">
+    <span class="mceNonEditable brea" wce="__t=brea&amp;__n=&amp;break_type=pb&amp;number=1&amp;rv=&amp;fibre_type=&amp;facs=&amp;lb_alignment=&amp;hasBreak=no" id="pb_3_1710167608738750"><span class="format_start mceNonEditable">‹</span><br />PB 1<span class="format_end mceNonEditable">›</span></span><span class="mceNonEditable brea" wce="__t=brea&amp;__n=&amp;break_type=cb&amp;number=&amp;lb_alignment=&amp;rv=&amp;fibre_type=&amp;facs=&amp;hasBreak=no" id="cb_3_1710167608738750"><span class="format_start mceNonEditable">‹</span><br />CB <span class="format_end mceNonEditable">›</span></span><span class="mceNonEditable brea" wce="__t=brea&amp;__n=&amp;break_type=lb&amp;number=&amp;lb_alignment=indent&amp;rv=&amp;fibre_type=&amp;facs=&amp;hasBreak=no" id="lb_3_1710167608738750"><span class="format_start mceNonEditable">‹</span><br />↵→ <span class="format_end mceNonEditable">›</span></span> <span class="book_number mceNonEditable" wce="__t=book_number" id="1">8</span> <span class="chapter_number mceNonEditable" wce="__t=chapter_number" id="2">11</span> <span class="verse_number mceNonEditable" wce="__t=verse_number">9</span> προσανεπλήρωσ<span class="gap" wce_orig="%CE%B1%CE%BD" wce="__t=gap&amp;__n=&amp;gap_reason_dummy_lacuna=lacuna&amp;gap_reason_dummy_illegible=illegible&amp;gap_reason_dummy_unspecified=unspecified&amp;gap_reason_dummy_inferredPage=inferredPage&amp;supplied_source_other=&amp;supplied_source=na28&amp;gap_reason=illegible&amp;unit_other=&amp;unit=&amp;mark_as_supplied=supplied"><span class="format_start mceNonEditable">‹</span>[αν]<span class="format_end mceNonEditable">›</span></span> <span class="mceNonEditable brea" wce="__t=brea&amp;__n=&amp;break_type=lb&amp;number=&amp;lb_alignment=indent&amp;rv=&amp;fibre_type=&amp;facs=&amp;hasBreak=no"><span class="format_start mceNonEditable">‹</span><br />↵→ <span class="format_end mceNonEditable">›</span></span> οἱ ἀδελφοὶ ἐλθόντ<span class="gap" wce_orig="%CE%B5%CF%82" wce="__t=gap&amp;__n=&amp;gap_reason_dummy_lacuna=lacuna&amp;gap_reason_dummy_illegible=illegible&amp;gap_reason_dummy_unspecified=unspecified&amp;gap_reason_dummy_inferredPage=inferredPage&amp;supplied_source_other=&amp;supplied_source=na28&amp;gap_reason=illegible&amp;unit_other=&amp;unit=&amp;mark_as_supplied=supplied"><span class="format_start mceNonEditable">‹</span>[ες]<span class="format_end mceNonEditable">›</span></span> <span class="mceNonEditable brea" wce="__t=brea&amp;__n=&amp;break_type=lb&amp;number=&amp;lb_alignment=indent&amp;rv=&amp;fibre_type=&amp;facs=&amp;hasBreak=no"><span class="format_start mceNonEditable">‹</span><br />↵→ <span class="format_end mceNonEditable">›</span></span> ἀπὸ μακεδονίας <span class="mceNonEditable brea" wce="__t=brea&amp;__n=&amp;break_type=lb&amp;number=&amp;lb_alignment=&amp;rv=&amp;fibre_type=&amp;facs=&amp;hasBreak=no"><span class="format_start mceNonEditable">‹</span><br />↵ <span class="format_end mceNonEditable">›</span></span> καὶ ἐν παντὶ <span class="pc" wce="__t=pc"><span class="format_start mceNonEditable">‹</span>·<span class="format_end mceNonEditable">›</span></span> ἀβαρὴ ἐ<span class="mceNonEditable brea" wce="__t=brea&amp;__n=&amp;break_type=lb&amp;number=&amp;lb_alignment=indent&amp;rv=&amp;fibre_type=&amp;facs=&amp;hasBreak=yes"><span class="format_start mceNonEditable">‹</span>-<br />↵→ <span class="format_end mceNonEditable">›</span></span>μαυτὸν ὑμῖν ἐτη<span class="mceNonEditable brea" wce="__t=brea&amp;__n=&amp;break_type=lb&amp;number=&amp;lb_alignment=indent&amp;rv=&amp;fibre_type=&amp;facs=&amp;hasBreak=yes"><span class="format_start mceNonEditable">‹</span>-<br />↵→ <span class="format_end mceNonEditable">›</span></span>ρησα καὶ τήρησω <span class="pc" wce="__t=pc"><span class="format_start mceNonEditable">‹</span>˙<span class="format_end mceNonEditable">›</span></span> <span class="mceNonEditable brea" wce="__t=brea&amp;__n=&amp;break_type=lb&amp;number=&amp;lb_alignment=&amp;rv=&amp;fibre_type=&amp;facs=&amp;hasBreak=no"><span class="format_start mceNonEditable">‹</span><br />↵ <span class="format_end mceNonEditable">›</span></span><span class="verse_number mceNonEditable" wce="__t=verse_number">10</span> ἐστιν ἀλήθια <span class="abbr_add_overline" wce_orig="%CF%87%CF%85" wce="__t=abbr&amp;__n=&amp;original_abbr_text=&amp;add_overline=overline&amp;abbr_type_other=&amp;abbr_type=nomSac"><span class="format_start mceNonEditable">‹</span>χυ<span class="format_end mceNonEditable">›</span></span> ἐν ἐμ<span class="gap" wce_orig="%CE%BF%CE%B9" wce="__t=gap&amp;__n=&amp;gap_reason_dummy_lacuna=lacuna&amp;gap_reason_dummy_illegible=illegible&amp;gap_reason_dummy_unspecified=unspecified&amp;gap_reason_dummy_inferredPage=inferredPage&amp;supplied_source_other=&amp;supplied_source=na28&amp;gap_reason=illegible&amp;unit_other=&amp;unit=&amp;mark_as_supplied=supplied"><span class="format_start mceNonEditable">‹</span>[οι]<span class="format_end mceNonEditable">›</span></span> <span class="mceNonEditable brea" wce="__t=brea&amp;__n=&amp;break_type=lb&amp;number=&amp;lb_alignment=&amp;rv=&amp;fibre_type=&amp;facs=&amp;hasBreak=no"><span class="format_start mceNonEditable">‹</span><br />↵ <span class="format_end mceNonEditable">›</span></span> ὅτι ἡ <span class="gap" wce_orig="%CE%BA%CE%B1" wce="__t=gap&amp;__n=&amp;gap_reason_dummy_lacuna=lacuna&amp;gap_reason_dummy_illegible=illegible&amp;gap_reason_dummy_unspecified=unspecified&amp;gap_reason_dummy_inferredPage=inferredPage&amp;supplied_source_other=&amp;supplied_source=na28&amp;gap_reason=illegible&amp;unit_other=&amp;unit=&amp;mark_as_supplied=supplied"><span class="format_start mceNonEditable">‹</span>[κα]<span class="format_end mceNonEditable">›</span></span><span class="unclear" wce_orig="%CF%8D" wce="__t=unclear&amp;__n=&amp;unclear_text_reason_other=&amp;unclear_text_reason=damage to page"><span class="format_start mceNonEditable">‹</span>ύ̣<span class="format_end mceNonEditable">›</span></span>χησις αὔτη <span class="mceNonEditable brea" wce="__t=brea&amp;__n=&amp;break_type=lb&amp;number=&amp;lb_alignment=indent&amp;rv=&amp;fibre_type=&amp;facs=&amp;hasBreak=no"><span class="format_start mceNonEditable">‹</span><br />↵→ <span class="format_end mceNonEditable">›</span></span> οὐ φ<span class="gap" wce_orig="%CF%81%CE%B1%CE%B3" wce="__t=gap&amp;__n=&amp;gap_reason_dummy_lacuna=lacuna&amp;gap_reason_dummy_illegible=illegible&amp;gap_reason_dummy_unspecified=unspecified&amp;gap_reason_dummy_inferredPage=inferredPage&amp;supplied_source_other=&amp;supplied_source=na28&amp;gap_reason=illegible&amp;unit_other=&amp;unit=&amp;mark_as_supplied=supplied"><span class="format_start mceNonEditable">‹</span>[ραγ]<span class="format_end mceNonEditable">›</span></span>ήσεται εἰς <span class="mceNonEditable brea" wce="__t=brea&amp;__n=&amp;break_type=lb&amp;number=&amp;lb_alignment=indent&amp;rv=&amp;fibre_type=&amp;facs=&amp;hasBreak=no"><span class="format_start mceNonEditable">‹</span><br />↵→ <span class="format_end mceNonEditable">›</span></span> <span class="gap" wce_orig="%CE%B5%CE%BC%CE%B5%20%CE%B5%CE%BD" wce="__t=gap&amp;__n=&amp;gap_reason_dummy_lacuna=lacuna&amp;gap_reason_dummy_illegible=illegible&amp;gap_reason_dummy_unspecified=unspecified&amp;gap_reason_dummy_inferredPage=inferredPage&amp;supplied_source_other=&amp;supplied_source=na28&amp;gap_reason=illegible&amp;unit_other=&amp;unit=&amp;mark_as_supplied=supplied"><span class="format_start mceNonEditable">‹</span>[εμε εν]<span class="format_end mceNonEditable">›</span></span> τοῖς κλίμ<span class="gap" wce_orig="%CE%B1" wce="__t=gap&amp;__n=&amp;gap_reason_dummy_lacuna=lacuna&amp;gap_reason_dummy_illegible=illegible&amp;gap_reason_dummy_unspecified=unspecified&amp;gap_reason_dummy_inferredPage=inferredPage&amp;supplied_source_other=&amp;supplied_source=na28&amp;gap_reason=illegible&amp;unit_other=&amp;unit=&amp;mark_as_supplied=supplied"><span class="format_start mceNonEditable">‹</span>[α]<span class="format_end mceNonEditable">›</span></span><span class="mceNonEditable brea" wce="__t=brea&amp;__n=&amp;break_type=lb&amp;number=&amp;lb_alignment=indent&amp;rv=&amp;fibre_type=&amp;facs=&amp;hasBreak=yes"><span class="format_start mceNonEditable">‹</span>-<br />↵→ <span class="format_end mceNonEditable">›</span></span><span class="gap" wce_orig="%CF%83%CE%B9%CE%BD" wce="__t=gap&amp;__n=&amp;gap_reason_dummy_lacuna=lacuna&amp;gap_reason_dummy_illegible=illegible&amp;gap_reason_dummy_unspecified=unspecified&amp;gap_reason_dummy_inferredPage=inferredPage&amp;supplied_source_other=&amp;supplied_source=na28&amp;gap_reason=illegible&amp;unit_other=&amp;unit=&amp;mark_as_supplied=supplied"><span class="format_start mceNonEditable">‹</span>[σιν]<span class="format_end mceNonEditable">›</span></span> <span class="gap" wce="__t=gap&amp;__n=&amp;gap_reason_dummy_lacuna=lacuna&amp;gap_reason_dummy_illegible=illegible&amp;gap_reason_dummy_unspecified=unspecified&amp;gap_reason_dummy_inferredPage=inferredPage&amp;gap_reason=illegible&amp;unit_other=&amp;unit=char&amp;extent=15"><span class="format_start mceNonEditable">‹</span>[15]<span class="format_end mceNonEditable">›</span></span> <span class="gap" wce="__t=gap&amp;__n=&amp;gap_reason_dummy_lacuna=lacuna&amp;gap_reason_dummy_illegible=illegible&amp;gap_reason_dummy_unspecified=unspecified&amp;gap_reason_dummy_inferredPage=inferredPage&amp;gap_reason=illegible&amp;unit_other=&amp;unit=line&amp;extent=3"><span class="format_start mceNonEditable">‹</span><br />↵[...]<br />↵[...]<br />↵[...]<span class="format_end mceNonEditable">›</span></span>
+    </div>'>
+  </iframe> -->
+
+  <!-- <iframe style="width: 100%; height: 100vh;  margin-top: 5%;" src="" frameborder="0" [srcdoc]='teihtml'>
+</iframe> -->
+<div class="flex justify-content-center">
+  <span> <strong>Folio: {{selectedPage.page}}</strong> </span>
+</div>
+<hr style="border-top: dotted 1px;">
+<!-- <pre id="tei" class="flex justify-content-center">
+ 
+</pre> -->
+<div style="display: grid;">
+  <div style="  grid-column: 1; grid-row: 1; color: #cfae76;" >
+    <br>
+    <span *ngFor="let i of totalLinecount">{{i}} <br> </span>
+  </div>
+  <div class="flex justify-content-center teiContent" style="  grid-column: 1; grid-row: 1;">
+    <div #tei id="tei"></div>
+  </div>  
+</div>
+  </div>
+    <div
+    id="mirador-viewer"
+    style="width: 50%; height: 65vh; z-index: 10; position: relative; "
+  ></div>
+</div>
+
+<app-footer></app-footer>

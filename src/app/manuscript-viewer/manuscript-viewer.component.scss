@@ -1,0 +1,165 @@
+// pre {
+//     background: #FAE6C3;
+//     color: #303030;
+//     // padding: 10px 16px;
+//     border-radius: 2px;
+//     -moz-box-shadow: inset 0 0 10px #000;
+//     box-shadow: inset 0 0 10px #000;
+//     counter-reset: line 1;
+//   }
+  
+//   pre>span::before {
+//     content: '1';
+//     display: inline-block;
+//     padding: 0 .5em;
+//     margin-right: .5em;
+//     color: #888;
+//   }
+  
+//   pre div {
+//     line-height: 1.5rem;
+//     counter-increment: line;
+//   }
+  
+//   pre div::before {
+//     content: counter(line);
+//     display: inline-block;
+//     padding: 0 .5em;
+//     margin-right: .5em;
+//     color: #888;
+//   }
+@font-face {
+    font-family: oldGreek;
+    src: url('../../assets/fonts/P39.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.teiContainer{
+    width: 50%; 
+    height: 65vh; 
+    overflow: auto; 
+    padding: 2%; 
+    font-size: 150% !important; 
+    text-size-adjust: 150% !important; 
+    background-color: #FAE6C3; 
+    // font-family:Gentium Plus;
+    // border-radius: 2px;
+    // -moz-box-shadow: inset 0 0 10px #000;
+    // box-shadow: inset 0 0 10px #000;
+}
+
+.teiContent{
+    margin-left: 25%;
+    width: 50%;
+    counter-reset: thecodenumbering;
+    border-radius: 2px;
+    -moz-box-shadow: inset 0 0 10px #000;
+    box-shadow: inset 0 0 10px #000;
+    // font-family: oldGreek;
+    font-family:Gentium Plus;
+    
+}
+div[class=teiContent] div{
+    counter-increment: thecodenumbering;
+    
+}
+
+div[class=teiContent] div:before
+{
+    padding-right:5px;
+    content: counter(thecodenumbering);
+}
+
+tei-tei tei-lb::after {
+    content: "\A";
+    white-space: pre;
+}
+
+::ng-deep tei-ab::after{
+    white-space: pre;
+    content: "\A";
+    display: block;
+}
+
+::ng-deep tei-lb[rend="indent"]::after{
+    content: "\A    ";
+    white-space: pre;
+}
+// ::ng-deep tei-w{
+    
+  
+// }
+
+
+
+
+
+::ng-deep tei-ab span[id="chapter"]{
+    color: #333333;
+    font-size:medium;
+    font-weight: bold;
+    text-decoration:underline;
+}
+
+
+::ng-deep tei-lb::after {
+    content: "\A";
+    white-space: pre;
+}
+::ng-deep tei-tei tei-hi[rend="overline"] {
+    text-decoration: overline;
+}
+
+::ng-deep tei-tei tei-app tei-rdg {
+    pointer-events: none;
+}
+
+::ng-deep tei-tei tei-app tei-rdg[type="orig"] {
+    display: none;
+}
+::ng-deep tei-tei tei-app tei-rdg[type="corr"] tei-seg {
+    color: blue;
+}
+::ng-deep tei-tei tei-app tei-rdg[type="corr"] tei-seg::before {
+    content: "[";
+}
+::ng-deep tei-tei tei-app tei-rdg[type="corr"] tei-seg::after {
+    content: "]";
+}
+::ng-deep tei-tei tei-unclear[reason="damage to page"] {
+    display: inline-block;
+    position: relative;
+}
+
+::ng-deep tei-tei tei-unclear[reason="damage to page"]::before {
+    content: '.';
+    display: inline-block;
+
+    /* position the dot underneath the character */
+    position: absolute;
+    bottom: -0.3em;
+    left: 0;
+
+    /* center the dot horizontally */
+    text-align: center;
+    width: 100%;
+
+    /* ... (style the dot to your liking) */
+}
+
+// ::ng-deep tei-tei tei-unclear[reason="damage to page"]::before {
+//     content: "[";
+// }
+// ::ng-deep tei-tei tei-unclear[reason="damage to page"]::after {
+//     content: "]";
+// }
+::ng-deep tei-tei tei-supplied {
+    color: green;
+}
+::ng-deep tei-tei tei-supplied::before {
+    content: "[";
+}
+::ng-deep tei-tei tei-supplied::after {
+    content: "]";
+}

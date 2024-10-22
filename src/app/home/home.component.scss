@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+.content{
+    width: 60%;
+    margin-top: 8%;
+    flex-direction: row;
+}
+p{
+    line-height: 25pt;
+    text-align: justify;
+}
+a{
+    color: #4b5563;
+}
+
+:host ::ng-deep{
+    .crousalImg{
+        object-fit: contain !important;
+    }
+}
+
